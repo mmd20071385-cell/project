@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "vazir" ;
+  src: url(../src/assets/Vazir-Medium.woff);
+}
+@font-face {
+  font-family: "vazir-light" ;
+  src: url(../src/assets/Vazir-Light.woff);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-white font-sans overflow-x-hidden;
+  direction: rtl;
+}
+
+body.english {
+  direction: ltr;
+  font-family: Inter, sans-serif;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: white;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+  @apply text-3xl md:text-5xl font-bold mb-4;
+}
+
+.section-subtitle {
+  @apply text-slate-300 max-w-3xl mx-auto leading-8;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-glow;
+}
